@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message</title>
+  <style>
+    @font-face {
+      font-family: 'Pixelout';
+      src: local('Pixelout Personal Use Only'), local('Pixelout');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Upheaval TT (BRK)', 'Upheaval', 'Upheaval Pro', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      flex-shrink: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .manifesto-link {
+      display: inline-block;
+      font-family: 'Pixelout', 'Pixelout Personal Use Only', monospace;
+      font-weight: bold;
+      font-size: 1.35rem;
+      color: #1a1a1a;
+      text-decoration: none;
+      outline: none;
+      position: relative;
+    }
+
+    .manifesto-link:hover,
+    .manifesto-link:focus {
+      text-decoration: none;
+      outline: none;
+    }
+
+    .manifesto-link .manifesto-tooltip {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      margin-top: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      background: #000;
+      color: #fff;
+      font-size: 0.85rem;
+      font-family: Helvetica, Arial, sans-serif;
+      white-space: nowrap;
+      z-index: 10;
+      transition: opacity 0.2s, visibility 0.2s;
+    }
+
+    .manifesto-link:hover .manifesto-tooltip {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .finger-wrap {
+      animation: float 3s ease-in-out infinite;
+      margin-bottom: 2rem;
+    }
+
+    .finger-wrap img {
+      max-width: 280px;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .message {
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      line-height: 1.4;
+      max-width: 520px;
+      color: #1a1a1a;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="manifesto.html" class="manifesto-link">Manifesto<span class="manifesto-tooltip">Click on this, and you'll find out why</span></a>
+  </header>
+  <main>
+    <div class="finger-wrap">
+      <img src="finger-pointing-at-screen.png" alt="Finger pointing at screen">
+    </div>
+    <p class="message">If you're reading this, you just tried to scam me. Good job idiot, now go back to your mothers basement.</p>
+  </main>
+</body>
+</html>
